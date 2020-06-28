@@ -1,0 +1,60 @@
+.card__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card__c {
+    max-width: 50vw;
+}
+
+.card__title_h1 {
+    text-align: center;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    margin-left: 10px;
+    margin-right: 10px  ;
+}
+
+.card__header {
+    font-size: 0.45em !important;
+}
+
+input.card__form_input {
+    border-bottom: 1px solid #ffffff !important;
+    box-shadow: 0 1px 0 0 #ffffff !important;
+}
+
+input.card__form_input + label {
+    color: #ffffff !important;
+}
+
+input.card__form_input:focus {
+    border-bottom: 1px solid #540d54 !important;
+    box-shadow: 0 1px 0 0 #540d54 !important;
+}
+
+input.card__form_input:focus + label {
+    color: #540d54 !important;
+}
+
+input.card__form_input::placeholder {
+    color: #540d54 !important;
+}
+
+input.card__form_input::placeholder:focus {
+    color: #ffffff !important;
+}
+
+.card__form__login_btn {
+    margin-right: 10px;
+}
+
+input, select, textarea{
+    color: #fffff1;
+}
+
+textarea:focus, input:focus {
+    color: #fffff1;
+}
