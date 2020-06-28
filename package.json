@@ -1,0 +1,38 @@
+{
+  "name": "linker",
+  "version": "1.0.0",
+  "description": "Web Service for Shortening Links",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ythosa/linker.git"
+  },
+  "keywords": [
+    "links",
+    "short",
+    "mern",
+    "react",
+    "mongoDB",
+    "node",
+    "express"
+  ],
+  "author": "Ythosa <vasus714@yandex.ru>",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "bugs": {
+    "url": "https://github.com/Ythosa/linker/issues"
+  },
+  "homepage": "https://github.com/Ythosa/linker#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
