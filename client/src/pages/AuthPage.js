@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AuthPage.css'
 
 export const AuthPage = () => {
+    const [form, setForm] = useState({
+        email: '', password: ''
+    })
+
+    const changeHandler = event => {
+        setForm({ ...form, [event.target.name]: event.target.value })
+    }
+
     return (
         <div className="raw card__wrapper">
             <div className="card__c col s6 offset-s3">
@@ -16,6 +24,7 @@ export const AuthPage = () => {
                                 type="text"
                                 name="email"
                                 className="card__form_input"
+                                onChange={changeHandler}
                             />
                             <label htmlFor="email">Email</label>
                         </div>
@@ -26,6 +35,7 @@ export const AuthPage = () => {
                                 type="password"
                                 name="password"
                                 className="card__form_input"
+                                onChange={changeHandler}
                             />
                             <label htmlFor="email">Password</label>
                         </div>
