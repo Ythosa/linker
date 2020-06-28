@@ -17,9 +17,14 @@ export const useHttp = () => {
                 const data = await response.json()
 
                 if (!response.ok) {
-                    let err = 'Errors.'
-                    for (let e of data.errors) {
-                        err += ' ' + e.msg
+                    let err = ''
+                    if (data.errors) {
+                        err += 'Errors.'
+                        for (let e of data.errors) {
+                            err += ' ' + e.msg
+                        }
+                    } else {
+                        err = data.message
                     }
 
                     throw new Error(err || 'Something went wrong. :(')
