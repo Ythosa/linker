@@ -1,13 +1,23 @@
 import React, { useState } from 'react'
 import './AuthPage.css'
+import { useHttp } from '../hooks/http.hook'
 
 export const AuthPage = () => {
+    const { loading, request } = useHttp()
+
     const [form, setForm] = useState({
         email: '', password: ''
     })
 
     const changeHandler = event => {
         setForm({ ...form, [event.target.name]: event.target.value })
+    }
+
+    const regiserHandler = async () => {
+        try {
+            const data = await request('/api/auth/register', 'POST', {...form})
+            console.log('Data', data)
+        } catch (e) {}
     }
 
     return (
@@ -24,7 +34,7 @@ export const AuthPage = () => {
                                 type="text"
                                 name="email"
                                 className="card__form_input"
-                                onChange={changeHandler}
+                                onChange={ changeHandler }
                             />
                             <label htmlFor="email">Email</label>
                         </div>
@@ -35,14 +45,25 @@ export const AuthPage = () => {
                                 type="password"
                                 name="password"
                                 className="card__form_input"
-                                onChange={changeHandler}
+                                onChange={ changeHandler }
                             />
                             <label htmlFor="email">Password</label>
                         </div>
                     </div>
                     <div className="card-action">
-                        <button className="btn deep-purple darken-1 card__form__login_btn">Sign In</button>
-                        <button className="btn grey lighten-2 deep-purple-text">Sign Up</button>
+                        <button
+                            className="btn deep-purple darken-1 card__form__login_btn"
+                            disabled={loading}
+                        >
+                            Sign In
+                        </button>
+                        <button
+                            className="btn grey lighten-2 deep-purple-text"
+                            onClick={ regiserHandler }
+                            disabled={loading}
+                        >
+                            Sign Up
+                        </button>
                     </div>
                 </div>
             </div>
