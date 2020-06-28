@@ -39,7 +39,7 @@ router.post(
         res.status(201).json({ message: 'The user is created.' })
 
     } catch (e) {
-        res.status(500).json({ message: "Something went wrong. Try again. :("})
+        res.status(500).json({ message: "Something went wrong. Try again. :(" })
     }
 })
 
@@ -68,7 +68,6 @@ router.post(
         }
 
         const isMatch = await bcrypt.compare(password, user.password)
-
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid username or password.' })
         }
@@ -82,7 +81,7 @@ router.post(
         res.json({ token, userId: user.id })
 
     } catch (e) {
-        res.status(500).json({ message: "Something went wrong. Try again :("})
+        res.status(500).json({ message: "Something went wrong. Try again. :(" })
     }
 })
 
