@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import './AuthPage.css'
 import { useHttp } from '../hooks/http.hook'
 
 export const AuthPage = () => {
-    const { loading, request } = useHttp()
+    const { loading, error, request } = useHttp()
 
     const [form, setForm] = useState({
         email: '', password: ''
     })
+
+    useEffect(() => {
+        
+    }, [error])
 
     const changeHandler = event => {
         setForm({ ...form, [event.target.name]: event.target.value })
@@ -53,14 +57,14 @@ export const AuthPage = () => {
                     <div className="card-action">
                         <button
                             className="btn deep-purple darken-1 card__form__login_btn"
-                            disabled={loading}
+                            disabled={ loading }
                         >
                             Sign In
                         </button>
                         <button
                             className="btn grey lighten-2 deep-purple-text"
                             onClick={ regiserHandler }
-                            disabled={loading}
+                            disabled={ loading }
                         >
                             Sign Up
                         </button>
