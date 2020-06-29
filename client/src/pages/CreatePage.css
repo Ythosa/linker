@@ -1,24 +1,5 @@
-.card__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.card__c {
-    max-width: 50vw;
-}
-
-.card__title_h1 {
-    text-align: center;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
-    margin-left: 10px;
-    margin-right: 10px  ;
-}
-
-.card__header {
-    font-size: 0.45em !important;
+.form_wrapper {
+    padding-top: 2rem;
 }
 
 input.card_form_input {
@@ -45,16 +26,4 @@ input.card_form_input::placeholder {
 
 input.card_form_input::placeholder:focus {
     color: #ffffff !important;
-}
-
-.card__form__login_btn {
-    margin-right: 10px;
-}
-
-input, select, textarea{
-    color: #fffff1;
-}
-
-textarea:focus, input:focus {
-    color: #fffff1;
 }

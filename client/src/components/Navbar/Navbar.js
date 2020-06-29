@@ -15,8 +15,8 @@ export const Navbar = () => {
     }
 
     useEffect(() => {
-        let elements = document.querySelectorAll('.sidenav');
-        let instances = window.M.Sidenav.init(elements);
+        let elements = document.querySelectorAll('.sidenav')
+        window.M.Sidenav.init(elements)
     }, [])
 
     return (
