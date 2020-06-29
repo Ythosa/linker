@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { AuthContext } from './context/AuthContext'
 import { useRoutes } from './routes'
 import { useAuth } from './hooks/auth.hook'
+import { Navbar } from './componens/Navbar/Navbar'
 import 'materialize-css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         }}>
             <Router>
                 <h1 className="container">
+                    { isAuthenticated ? <Navbar /> : null }
                     { routes }
                 </h1>
             </Router>
