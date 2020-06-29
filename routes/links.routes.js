@@ -12,7 +12,8 @@ router.post('/generate', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-
+        const links = await Link.find({ owner: null }) // ???
+        res.json(links)
     } catch (e) {
         res.status(500).json({ message: "Something went wrong. Try again. :(" })
     }
@@ -20,7 +21,8 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-
+        const links = await Link.findById(req.params.id)
+        res.json(links)
     } catch (e) {
         res.status(500).json({ message: "Something went wrong. Try again. :(" })
     }
