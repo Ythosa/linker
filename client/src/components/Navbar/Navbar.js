@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 
+import './Navbar.css'
+
 export const Navbar = () => {
     const history = useHistory()
     const auth = useContext(AuthContext)
@@ -20,8 +22,8 @@ export const Navbar = () => {
     return (
         <React.Fragment>
         <nav>
-            <div className="nav-wrapper">
-                <a href="/" className="brand-logo">
+            <div className="nav-wrapper deep-purple lighten-3">
+                <a href="/" className="brand-logo nav_logo">
                     <i className="material-icons">photo_size_select_small</i>
                     Linker
                 </a>
@@ -30,9 +32,9 @@ export const Navbar = () => {
                     <li><NavLink to="/create">Create</NavLink></li>
                     <li><NavLink to="/links">Links</NavLink></li>
                     <li>
-                        <a href="/" className="waves-effect waves-purple btn" onClick={ logoutHandler }>
+                        <a href="/" className="waves-effect waves-purple btn grey lighten-4 deep-purple-text nav_desktop_logout_btn nav_logout_btn" onClick={ logoutHandler }>
                             Sign out
-                            <i className="material-icons right">logout</i>
+                            <i className="material-icons right nav_logout_btn_icon">logout</i>
                         </a>
                     </li>
                 </ul>
@@ -43,9 +45,9 @@ export const Navbar = () => {
             <li><NavLink to="/create">Create</NavLink></li>
             <li><NavLink to="/links">Links</NavLink></li>
             <li>
-                <a href="/" className="waves-effect waves-purple btn" onClick={ logoutHandler }>
+                <a href="/" className="waves-effect waves-purple btn grey lighten-4 deep-purple-text nav_logout_btn" onClick={ logoutHandler }>
                     Sign out
-                    <i className="material-icons right">logout</i>
+                    <i className="material-icons right nav_logout_btn_icon">logout</i>
                 </a>
             </li>
         </ul>

@@ -1,0 +1,17 @@
+.nav_logo {
+    margin-left: 10px;
+}
+
+.nav_logout_btn {
+    font-size: 0.8rem;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.nav_desktop_logout_btn {
+    margin-bottom: 5px;
+}
+
+.nav_logout_btn_icon {
+    margin-left: 10px !important;
+}
