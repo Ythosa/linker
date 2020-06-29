@@ -1,5 +1,6 @@
 {
   "port": 5000,
   "jwtSecret": "e2491d47dc880a18bbc0b70ad2c90f9e",
-  "mongoUri": "mongodb+srv://ythosa:Lolka228@cluster0-iqwyr.azure.mongodb.net/app?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://ythosa:Lolka228@cluster0-iqwyr.azure.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
 }
