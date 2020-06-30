@@ -2,29 +2,29 @@
     padding-top: 2rem;
 }
 
-input.card_form_input {
+input.create_form_input {
     border-bottom: 1px solid #540d54 !important;
     box-shadow: 0 1px 0 0 #540d54 !important;
 }
 
-input.card_form_input + label {
+input.create_form_input + label {
     color: gray !important;
 }
 
-input.card_form_input:focus {
+input.create_form_input:focus {
     border-bottom: 1px solid #540d54 !important;
     box-shadow: 0 1px 0 0 #540d54 !important;
 }
 
-input.card_form_input:focus + label {
+input.create_form_input:focus + label {
     color: #540d54 !important;
 }
 
-input.card_form_input::placeholder {
+input.create_form_input::placeholder {
     color: gray !important;
 }
 
-input.card_form_input::placeholder:focus {
+input.create_form_input::placeholder:focus {
     color: #540d54 !important;
 }
 

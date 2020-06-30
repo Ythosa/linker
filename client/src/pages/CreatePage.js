@@ -1,9 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { useHttp } from '../hooks/http.hook'
+import { AuthContext } from '../context/AuthContext'
 
 import './CreatePage.css'
 
 export const CreatePage = () => {
+    const history = useHistory()
+    const auth = useContext(AuthContext)
     const { request } = useHttp()
     const [link, setLink] = useState('')
 
@@ -14,11 +18,17 @@ export const CreatePage = () => {
     const pressHandler = async event => {
         if (event.key === 'Enter') {
             try {
-                const data = await request('/api/link/generate', 'POST', {
-                    from: link
-                })
-                console.log(data)
-                setLink('')
+                const data = await request(
+                    '/api/link/generate',
+                    'POST',
+                    {
+                        from: link
+                    },
+                    {
+                        Authorization: `Bearer ${auth.token}`
+                    }
+                )
+                history.push(`/detail/${data.link._id}`)
             } catch (e) {}
         }
     }
@@ -32,11 +42,11 @@ export const CreatePage = () => {
                         id="email"
                         type="text"
                         value={ link }
-                        className="card_form_input"
+                        className="create_form_input"
                         onChange={ e => setLink(e.target.value) }
                         onKeyPress={ pressHandler }
                     />
-                    <label htmlFor="email">Enter your link here</label>
+                    <label htmlFor="email">Enter the link</label>
                 </div>
             </div>
         </div>
