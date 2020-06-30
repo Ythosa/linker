@@ -22,10 +22,10 @@ function App() {
             login, logout, token, userId, isAuthenticated
         }}>
             <Router>
-                <h1 className="container">
+                <div className="container">
                     { isAuthenticated ? <Navbar /> : null }
                     { routes }
-                </h1>
+                </div>
             </Router>
         </AuthContext.Provider>
     )

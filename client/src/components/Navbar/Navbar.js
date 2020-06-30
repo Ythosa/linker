@@ -32,7 +32,7 @@ export const Navbar = () => {
                     <li><NavLink to="/create">Create</NavLink></li>
                     <li><NavLink to="/links">Links</NavLink></li>
                     <li>
-                        <a href="/" className="waves-effect waves-purple btn grey lighten-4 deep-purple-text nav_desktop_logout_btn nav_logout_btn" onClick={ logoutHandler }>
+                        <a href="/" className="waves-effect waves-purple btn grey lighten-4 deep-purple-text nav_logout_btn" onClick={ logoutHandler }>
                             Sign out
                             <i className="material-icons right nav_logout_btn_icon">logout</i>
                         </a>

@@ -11,14 +11,14 @@
 
 .card__title_h1 {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 3.3em;
     letter-spacing: 0.1em;
     margin-left: 10px;
-    margin-right: 10px  ;
+    margin-right: 10px;
 }
 
 .card__header {
-    font-size: 0.45em !important;
+    margin-bottom: 1.7em !important;
 }
 
 input.card_form_input {

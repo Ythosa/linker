@@ -1,5 +1,7 @@
 .form_wrapper {
-    padding-top: 2rem;
+    margin-top: 2em;
+    margin-left: 0 !important;
+    width: 100% !important;
 }
 
 input.create_form_input {
@@ -38,12 +40,12 @@ textarea:focus, input:focus {
 
 .input-field .prefix {
     color: gray;
-    margin-top: 23px
+    margin-top: 7px
 }
 
 .input-field .prefix.active {
     color: #540d54;
-    margin-top: 23px;
+    margin-top: 7px;
 }
 
 .input-field {
