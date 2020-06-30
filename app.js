@@ -6,6 +6,7 @@ const app = express()
 
 app.use(express.json({ extended: true }))
 
+app.use('/t', require('./routes/redirects.routes'))
 app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/link', require('./routes/links.routes'))
 
