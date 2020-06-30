@@ -18,6 +18,7 @@ export const CreatePage = () => {
                     from: link
                 })
                 console.log(data)
+                setLink('')
             } catch (e) {}
         }
     }
@@ -25,17 +26,17 @@ export const CreatePage = () => {
     return (
         <div className="row">
             <div className="col s8 offset-s2 form_wrapper">
-                <div className="input-field">
+                <div className="input-field col s12">
+                    <i className="material-icons prefix">link</i>
                     <input
-                        placeholder="Insert the link"
-                        id="link"
+                        id="email"
                         type="text"
                         value={ link }
                         className="card_form_input"
                         onChange={ e => setLink(e.target.value) }
                         onKeyPress={ pressHandler }
                     />
-                    <label htmlFor="email">Enter the link</label>
+                    <label htmlFor="email">Enter your link here</label>
                 </div>
             </div>
         </div>

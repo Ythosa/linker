@@ -3,12 +3,12 @@
 }
 
 input.card_form_input {
-    border-bottom: 1px solid #ffffff !important;
-    box-shadow: 0 1px 0 0 #ffffff !important;
+    border-bottom: 1px solid #540d54 !important;
+    box-shadow: 0 1px 0 0 #540d54 !important;
 }
 
 input.card_form_input + label {
-    color: #ffffff !important;
+    color: gray !important;
 }
 
 input.card_form_input:focus {
@@ -21,9 +21,31 @@ input.card_form_input:focus + label {
 }
 
 input.card_form_input::placeholder {
-    color: #540d54 !important;
+    color: gray !important;
 }
 
 input.card_form_input::placeholder:focus {
-    color: #ffffff !important;
+    color: #540d54 !important;
+}
+
+input, select, textarea{
+    color: #540d54;
+}
+
+textarea:focus, input:focus {
+    color: #540d54;
+}
+
+.input-field .prefix {
+    color: gray;
+    margin-top: 23px
+}
+
+.input-field .prefix.active {
+    color: #540d54;
+    margin-top: 23px;
+}
+
+.input-field {
+    color: gray;
 }
