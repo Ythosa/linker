@@ -36,7 +36,8 @@ export const AuthPage = () => {
 
     const registerHandler = async () => {
         try {
-            await request('/api/auth/register', 'POST', {...form})
+            const data = await request('/api/auth/register', 'POST', {...form})
+            message(data.message)
         } catch (e) {}
     }
 
