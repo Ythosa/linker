@@ -23,7 +23,7 @@ export const Navbar = () => {
         <React.Fragment>
         <nav>
             <div className="nav-wrapper deep-purple lighten-3">
-                <span className="brand-logo nav_logo">
+                <span className="brand-logo">
                     <i className="material-icons">photo_size_select_small</i>
                     Linker
                 </span>
